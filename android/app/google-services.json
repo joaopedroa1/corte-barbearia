@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1088489193504",
+    "project_id": "teste-499a1",
+    "storage_bucket": "teste-499a1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1088489193504:android:c79975362863283f893c45",
+        "android_client_info": {
+          "package_name": "com.example.corte_barbearia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAy59iLW6MkM8b5LfQ7g3ylKiGTAqyKsaQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
