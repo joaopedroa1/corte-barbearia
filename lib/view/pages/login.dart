@@ -1,3 +1,4 @@
+import 'package:corte_barbearia/view/pages/menuCortes.dart';
 import 'package:corte_barbearia/view/widgets/myAppBar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -42,7 +43,7 @@ class Login extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: TextFormField(
-                controller: senha,
+                  controller: senha,
                   style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
                       hintText: 'Senha',
@@ -68,7 +69,23 @@ class Login extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
                     ),
-                    onPressed: () {},
+                    onPressed: () async {
+                      try {
+                        final credential = await FirebaseAuth.instance
+                            .signInWithEmailAndPassword(
+                          email: email.text,
+                          password: senha.text,
+                        );
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => Menu()));
+                      } on FirebaseAuthException catch (e) {
+                        if (e.code == 'user-not-found') {
+                          print('No user found for that email.');
+                        } else if (e.code == 'wrong-password') {
+                          print('Wrong password provided for that user.');
+                        }
+                      }
+                    },
                     child: const Text(
                       'Entrar',
                       style: TextStyle(
