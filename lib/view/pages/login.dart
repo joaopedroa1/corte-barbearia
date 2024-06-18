@@ -1,5 +1,4 @@
 import 'package:corte_barbearia/view/pages/menuCortes.dart';
-import 'package:corte_barbearia/view/widgets/myAppBar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -43,6 +42,7 @@ class Login extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: TextFormField(
+                obscureText: true,
                   controller: senha,
                   style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
