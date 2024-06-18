@@ -35,25 +35,11 @@ class Menu extends StatelessWidget {
                   children: [
                   Padding(
                     padding: const EdgeInsets.all(6.0),
-                    child: card(150, 250,"Corte De Cabelo","assets/card_img1.png", 'A partir de: 50,00'),
+                    child: card(150, 250,"Corte De Cabelo","assets/card_img1.png", 'A partir de: 50,00', context),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(6.0),
-                    child: card(150, 250,"Barba","assets/card_img2.png",'A partir de: 30,00'),
-                  ),
-                ]),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Row(
-                  children: [
-                  Padding(
-                    padding: const EdgeInsets.all(6.0),
-                    child: card(150, 250,"Corte + Barba","assets/card_img3.png",'A partir de: 75,00'),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(6.0),
-                    child: card(150, 250,"Sobrancelha","assets/card_img4.png",'A partir de: 15,00'),
+                    child: card(150, 250,"Barba","assets/card_img2.png",'A partir de: 30,00', context),
                   ),
                 ]),
               ),
@@ -63,11 +49,25 @@ class Menu extends StatelessWidget {
                   children: [
                   Padding(
                     padding: const EdgeInsets.all(6.0),
-                    child: card(150, 250,"Luzes","assets/card_img5.png", 'A partir de: 50,00'),
+                    child: card(150, 250,"Corte + Barba","assets/card_img3.png",'A partir de: 75,00', context),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(6.0),
-                    child: card(150, 250,"Pigmentação","assets/card_img6.png",'A partir de: 25,00'),
+                    child: card(150, 250,"Sobrancelha","assets/card_img4.png",'A partir de: 15,00', context),
+                  ),
+                ]),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Row(
+                  children: [
+                  Padding(
+                    padding: const EdgeInsets.all(6.0),
+                    child: card(150, 250,"Luzes","assets/card_img5.png", 'A partir de: 50,00', context),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(6.0),
+                    child: card(150, 250,"Pigmentação","assets/card_img6.png",'A partir de: 25,00', context),
                   ),
                 ]),
               ),

@@ -1,7 +1,8 @@
+import 'package:corte_barbearia/view/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Widget card(double largura, double altura, String texto,String img, String texto1) {
+Widget card(double largura, double altura, String texto,String img, String texto1, BuildContext context) {
   return Container(
     margin: const EdgeInsets.fromLTRB(4, 4, 0, 0),
     width: largura,
@@ -9,6 +10,13 @@ Widget card(double largura, double altura, String texto,String img, String texto
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(8),
     ),
+    child: GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Login()),
+        );
+      },
     child: Card(
       color: Colors.white,
       child: Column(
@@ -29,5 +37,6 @@ Widget card(double largura, double altura, String texto,String img, String texto
         ],
       ),
     ),
+  ),
   );
 }
