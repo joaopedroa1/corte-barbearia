@@ -1,4 +1,4 @@
-import 'package:corte_barbearia/view/pages/login.dart';
+import 'package:corte_barbearia/view/pages/corteCabelo.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -14,7 +14,7 @@ Widget card(double largura, double altura, String texto,String img, String texto
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Login()),
+          MaterialPageRoute(builder: (context) => const CorteDeCabelo()),
         );
       },
     child: Card(
