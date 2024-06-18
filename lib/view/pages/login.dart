@@ -1,5 +1,4 @@
 import 'package:corte_barbearia/view/pages/menuCortes.dart';
-import 'package:corte_barbearia/view/widgets/myAppBar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
