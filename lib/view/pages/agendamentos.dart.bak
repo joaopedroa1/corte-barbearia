@@ -1,0 +1,14 @@
+import 'package:corte_barbearia/view/widgets/myAppBar.dart';
+import 'package:flutter/material.dart';
+
+  Widget cardAgenda(String corte, String cabelereiro, String momento) {
+    return Scaffold(
+      body: Column(
+        children: [
+          Text(corte),
+          Text(cabelereiro),
+          Text(momento)
+        ],
+      ),
+    );
+}

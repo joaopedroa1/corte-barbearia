@@ -1,4 +1,5 @@
 import 'package:another_carousel_pro/another_carousel_pro.dart';
+import 'package:corte_barbearia/view/pages/agenda.dart';
 import 'package:corte_barbearia/view/widgets/card.dart';
 import 'package:corte_barbearia/view/widgets/myAppBar.dart';
 import 'package:flutter/material.dart';
@@ -71,15 +72,27 @@ class Menu extends StatelessWidget {
                   ),
                 ]),
               ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.white,
+                ),
+                onPressed: () {
+                  Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => Agendar()));
+                }, child: 
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Text('Cortes agendados', style: TextStyle(color: Colors.black, fontSize: 15), ),
+                )
+                ),
               const Image(width:80, height: 100, image: AssetImage('assets/Group 1.png')),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text("Contatos", style: GoogleFonts.poppins(textStyle: const TextStyle(fontSize: 16,fontWeight: FontWeight.bold, color: Colors.white))),
               ),
               SizedBox(),
-              const Image(image: AssetImage('assets/whatsapp.png')),
-              const Image(image: AssetImage('assets/instagram.png'))
-
+              const Image(image: AssetImage('assets/whatsapp.png'),width: 200, height: 50),
+              const Image(image: AssetImage('assets/instagram.png'), width: 200, height: 50)
             ],
           ),
         ),
